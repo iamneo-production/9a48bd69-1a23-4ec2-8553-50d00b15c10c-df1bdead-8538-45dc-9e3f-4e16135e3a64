@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AdminService } from '../services/admin.service';
 import { Team } from '../../models/team.model';
 import { Player } from '../../models/player.model';
+import { ConsoleReporter } from 'jasmine';
 
 @Component({
   selector: 'app-admin',
@@ -37,6 +38,7 @@ export class AdminComponent implements OnInit {
 
   createTeam(newTeam:Team): void {
     console.log("teamofnew"+newTeam);
+    console.log("hello world");
 
     this.adminService.createTeam(newTeam).subscribe(() => {
       console.log("teamofnew"+newTeam);
